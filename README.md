@@ -1,1 +1,54 @@
 # Multi-Frame-Neural-Scene-Flow
+
+[Dongrui Liu](https://shenqildr.github.io/), [Xueqian Li](https://lilac-lee.github.io/), and [Lei Chu](https://wides.usc.edu/#people)
+
+arXiv link: [https://arxiv.org/pdf/2304.09121.pdf](https://arxiv.org/pdf/2403.16116v1.pdf)
+
+---
+
+Neural Scene Flow Prior (NSFP) and Fast Neural Scene Flow (FNSF) have shown remarkable adaptability in the context of large out-of-distribution autonomous driving. Despite their success, the underlying reasons for their astonishing generalization capabilities remain unclear. Our research addresses this gap by examining the generalization capabilities of NSFP through the lens of uniform stability, revealing that its performance is inversely proportional to the number of input point clouds. This finding sheds light on NSFP’s effectiveness in handling large-scale point cloud scene flow estimation tasks. Motivated by such theoretical insights, we further explore the improvement of scene flow estimation by leveraging historical point clouds across multiple frames, which inherently increases the number of point clouds. Consequently, we propose a simple and effective method for multi-frame point cloud scene flow estimation, along with a theoretical evaluation of its generalization abilities. Our analysis confirms that the proposed method maintains a limited generalization error, suggesting that adding multiple frames to the scene flow optimization process does not detract from its generalizability. Extensive experimental results on large-scale autonomous driving Waymo Open and Argoverse lidar datasets demonstrate that the proposed method achieves state-of-the-art performance.
+
+---
+
+### Prerequisites
+This code is based on PyTorch implementation, and tested on PyTorch=1.13.0, Python=3.10.8 with CUDA 11.6 or PyTorch=1.12.0, Python=3.9.15 with CUDA 11.6. 
+But it should work fine with a higher version of PyTorch.
+
+A simple installation is ```bash ./install.sh```. For a detailed installation guide, please refer to [FastNSF](https://github.com/Lilac-Lee/FastNSF).
+
+
+### Dataset
+We provide datasets we used in our paper.
+You may download datasets used in the paper from these links:
+
+- [Argoverse](https://drive.google.com/file/d/1qyTaLz1_CTF3IB1gr3XpIiIDh6klQOA4/view?usp=sharing) (370MB)
+
+- [Waymo Open](https://drive.google.com/file/d/1urONegaI6pS47bUv-Kw0nl0oGFzGfIl2/view?usp=sharing) (453MB)
+
+After you download the dataset, you can create a symbolic link in the ./dataset folder as ```./dataset/argoverse``` and ```./dataset/waymo```.
+<br></br>
+
+### Acknowledgement
+[Neural Scene Flow Prior](https://github.com/Lilac-Lee/Neural_Scene_Flow_Prior)
+
+[FastGeodis: Fast Generalised Geodesic Distance Transform](https://github.com/masadcv/FastGeodis)
+
+### Contributing
+If you find the project useful for your research, you may cite,
+```
+@InProceedings{Li_2023_ICCV,
+  title={Fast Neural Scene Flow},
+  author={Li, Xueqian and Zheng, Jianqiao and Ferroni, Francesco and Pontes, Jhony Kaesemodel and Lucey, Simon},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+  month={October},
+  year={2023},
+  pages={9878-9890}
+}
+
+@article{liu2024self,
+  title={Self-Supervised Multi-Frame Neural Scene Flow},
+  author={Liu, Dongrui and Liu, Daqi and Li, Xueqian and Lin, Sihao and Wang, Bing and Chang, Xiaojun and Chu, Lei and others},
+  journal={arXiv preprint arXiv:2403.16116},
+  year={2024}
+}
+```
