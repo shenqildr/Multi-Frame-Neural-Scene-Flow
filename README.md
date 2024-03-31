@@ -28,6 +28,24 @@ You may download datasets used in the paper from these links:
 After you download the dataset, you can create a symbolic link in the ./dataset folder as ```./dataset/argoverse``` and ```./dataset/waymo```.
 <br></br>
 
+---
+### Optimization
+
+- Waymo Open scene flow dataset
+    ```
+    python optimization.py --device cuda:0 --dataset WaymoOpenSceneFlowDataset --dataset_path ./dataset/waymo --exp_name opt_waymo_open_full_points --batch_size 1 --use_all_points --iters 5000 --model neural_prior --hidden_units 128 --layer_size 8 --lr 0.01 --act_fn relu --earlystopping --early_patience 5 --early_min_delta 0.001 --grid_factor 10 --init_weight --layer_size_align 3
+    ```
+
+- Argoverse scene flow dataset
+
+    ```
+    python optimization.py --device cuda:0 --dataset ArgoverseSceneFlowDatase --dataset_path ./dataset/argoverse --exp_name opt_waymo_open_full_points --batch_size 1 --use_all_points --iters 5000 --model neural_prior --hidden_units 128 --layer_size 8 --lr 0.01 --act_fn relu --earlystopping --early_patience 5 --early_min_delta 0.001 --grid_factor 10 --init_weight --layer_size_align 3
+    ```
+
+
+
+---
+
 ### Acknowledgement
 [Neural Scene Flow Prior](https://github.com/Lilac-Lee/Neural_Scene_Flow_Prior)
 
@@ -38,6 +56,14 @@ After you download the dataset, you can create a symbolic link in the ./dataset 
 ### Contributing
 If you find the project useful for your research, you may cite,
 ```
+@article{li2021neural,
+  title={Neural Scene Flow Prior},
+  author={Li, Xueqian and Kaesemodel Pontes, Jhony and Lucey, Simon},
+  journal={Advances in Neural Information Processing Systems},
+  volume={34},
+  year={2021}
+}
+
 @InProceedings{Li_2023_ICCV,
   title={Fast Neural Scene Flow},
   author={Li, Xueqian and Zheng, Jianqiao and Ferroni, Francesco and Pontes, Jhony Kaesemodel and Lucey, Simon},
