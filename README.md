@@ -31,6 +31,8 @@ After you download the dataset, you can create a symbolic link in the ./dataset 
 ### Acknowledgement
 [Neural Scene Flow Prior](https://github.com/Lilac-Lee/Neural_Scene_Flow_Prior)
 
+[Fast Neural Scene Flow](https://github.com/Lilac-Lee/FastNSF))
+
 [FastGeodis: Fast Generalised Geodesic Distance Transform](https://github.com/masadcv/FastGeodis)
 
 ### Contributing
