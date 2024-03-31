@@ -21,9 +21,9 @@ A simple installation is ```bash ./install.sh```. For a detailed installation gu
 We provide datasets we used in our paper.
 You may download datasets used in the paper from these links:
 
-- [Argoverse](https://drive.google.com/file/d/1qyTaLz1_CTF3IB1gr3XpIiIDh6klQOA4/view?usp=sharing) (370MB)
+- [Argoverse](https://drive.google.com/drive/folders/1xxHJq0OtpR_aH-k6PvR0g4CkI3z_jUa2?usp=sharing)
 
-- [Waymo Open](https://drive.google.com/file/d/1urONegaI6pS47bUv-Kw0nl0oGFzGfIl2/view?usp=sharing) (453MB)
+- [Waymo Open](https://drive.google.com/drive/folders/1eS0QV_2afEWi89NF_l1oB7Vb0amtMUy9?usp=sharing)
 
 After you download the dataset, you can create a symbolic link in the ./dataset folder as ```./dataset/argoverse``` and ```./dataset/waymo```.
 <br></br>
