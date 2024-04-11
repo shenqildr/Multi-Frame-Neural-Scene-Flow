@@ -33,13 +33,13 @@ After you download the dataset, you can create a symbolic link in the ./dataset 
 
 - Waymo Open scene flow dataset
     ```
-    python optimization.py --device cuda:0 --dataset WaymoOpenSceneFlowDataset --dataset_path ./dataset/waymo --exp_name opt_waymo_open_full_points --batch_size 1 --use_all_points --iters 5000 --model neural_prior --hidden_units 128 --layer_size 8 --lr 0.01 --act_fn relu --earlystopping --early_patience 5 --early_min_delta 0.001 --grid_factor 10 --init_weight --layer_size_align 3
+    python optimization.py --device cuda:0 --dataset WaymoOpenSceneFlowDataset --dataset_path ./dataset/waymo --exp_name opt_waymo_open_full_points --batch_size 1 --use_all_points --iters 5000 --model neural_prior --hidden_units 128 --layer_size 8 --lr 0.01 --act_fn relu --earlystopping --early_patience 10 --early_min_delta 0.001 --grid_factor 10 --init_weight --layer_size_align 3
     ```
 
 - Argoverse scene flow dataset
 
     ```
-    python optimization.py --device cuda:0 --dataset ArgoverseSceneFlowDatase --dataset_path ./dataset/argoverse --exp_name opt_waymo_open_full_points --batch_size 1 --use_all_points --iters 5000 --model neural_prior --hidden_units 128 --layer_size 8 --lr 0.01 --act_fn relu --earlystopping --early_patience 5 --early_min_delta 0.001 --grid_factor 10 --init_weight --layer_size_align 3
+    python optimization.py --device cuda:0 --dataset ArgoverseSceneFlowDatase --dataset_path ./dataset/argoverse --exp_name opt_waymo_open_full_points --batch_size 1 --use_all_points --iters 5000 --model neural_prior --hidden_units 128 --layer_size 8 --lr 0.01 --act_fn relu --earlystopping --early_patience 10 --early_min_delta 0.001 --grid_factor 10 --init_weight --layer_size_align 3
     ```
 
 
